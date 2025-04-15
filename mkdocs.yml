@@ -1,0 +1,54 @@
+site_name: Forge by FRC - 3472
+
+plugins: 
+  - search
+
+theme: 
+  logo: assets/FORGEWHITE.png
+  language: en
+  icon:
+    repo: assets/FORGEWHITE.png
+  favicon: assets/LOGO.png
+  font:
+      text: Inter
+      code: Fira Code
+  palette:
+      - scheme: buluk
+  name: material
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - toc.integrate
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.code.select
+markdown_extensions:
+  - attr_list
+  - admonition
+  - def_list
+  - tables
+  - md_in_html
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+
+extra_css:
+  - stylesheets/extra.css
+extra: 
+  social:
+    - icon: simple/github
+      link: https://github.com/Imcab
+
