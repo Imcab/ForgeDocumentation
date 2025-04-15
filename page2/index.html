@@ -1,0 +1,1476 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../page1/">
+      
+      
+        <link rel="next" href="../page3/">
+      
+      
+      <link rel="icon" href="../assets/LOGO.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>NetworkTablesUtil - Forge - Forge by FRC - 3472</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="buluk" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#networktablesutil-forge" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Forge by FRC - 3472" class="md-header__button md-logo" aria-label="Forge by FRC - 3472" data-md-component="logo">
+      
+  <img src="../assets/FORGEWHITE.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Forge by FRC - 3472
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NetworkTablesUtil - Forge
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="buluk" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Forge by FRC - 3472" class="md-nav__button md-logo" aria-label="Forge by FRC - 3472" data-md-component="logo">
+      
+  <img src="../assets/FORGEWHITE.png" alt="logo">
+
+    </a>
+    Forge by FRC - 3472
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to Forge Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    NetworkTablesUtil - Forge
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    NetworkTablesUtil - Forge
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ntpublisher" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTPublisher
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NTPublisher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#publishing-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishing values
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Publishing values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subfolder-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      SubFolder example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieving values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Data Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-sendable-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual Sendable Update
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networksubsystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      NetworkSubsystem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NetworkSubsystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extending-networksubsystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extending NetworkSubsystem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-networksubsystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using NetworkSubsystem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using NetworkSubsystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autopublish" class="md-nav__link">
+    <span class="md-ellipsis">
+      AutoPublish
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishcommands" class="md-nav__link">
+    <span class="md-ellipsis">
+      PublishCommands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publish-and-retrieving-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publish and retrieving data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntlistener" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTListener
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NTListener">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-listener" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Listener
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nttunnablenumber" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTTunnableNumber
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NTTunnableNumber">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-tunnable-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Tunnable number
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Tunnable number">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example constructor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntjoystick" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTJoystick
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NTJoystick">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntswerve" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTSwerve
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NTSwerve">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-ntswerve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using NTSwerve
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntcommand" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTCommand
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NTCommand">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-ntcommand" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using NTCommand
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntposeestimator" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTPoseEstimator
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NTPoseEstimator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-ntposeestimator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using NTPoseEstimator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntarrayboolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTArrayBoolean
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntarraydata" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTArrayData
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntarraydouble" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTArrayDouble
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntarraystring" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTArrayString
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntboolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTBoolean
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTData
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntdouble" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTDouble
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntstring" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTString
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntsupplierboolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTSupplierBoolean
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntsupplierbooleanarray" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTSupplierBooleanArray
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntsupplierdouble" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTSupplierDouble
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntsupplierdoublearray" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTSupplierDoubleArray
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SwerveLib - Forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RobotState - Forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sim - Forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Field - forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Equals -Forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math - Forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page91/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REV - Forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="networktablesutil-forge">NetworkTablesUtil - Forge</h1>
+<h2 id="ntpublisher">NTPublisher</h2>
+<p><code>NTPublisher</code> is the ultimate publisher through NetworkTables, works similar and better as the traditional <code>SmartDashboard</code> and also has the hability to retreive more data types</p>
+<table>
+<thead>
+<tr>
+<th>Features</th>
+<th>NTPublisher</th>
+<th>SmartDashboard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Publishing normal values</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Publishing special values (Pose2d, etc)</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Over 30 supported data types</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Retrieve over 30 data types</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Sendable support</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Different data paths</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<h3 id="publishing-values">Publishing values</h3>
+<p><code>NTPublisher</code> works the same as <code>SmartDashboard</code> with the extra step of you passing the table you want to publish your data, <code>SmartDashboard</code> puts you data in <strong>SmartDashboard/YourData</strong> but <code>NTPublisher</code> lets you custom your directory for better organization like: <strong>MyDirectory/MyData</strong>. Also <code>NTPublisher</code> lets you put your data un subfolders as: <strong>MyDirectory/MySubFolder/MyData</strong>.</p>
+<h4 id="example">Example</h4>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTPublisher</span><span class="p">.</span><span class="na">publish</span><span class="p">(</span><span class="s">&quot;Robot&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;GyroConnection&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">gyro</span><span class="p">.</span><span class="na">isConnected</span><span class="p">());</span>
+</code></pre></div>
+<h4 id="subfolder-example">SubFolder example</h4>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTPublisher</span><span class="p">.</span><span class="na">publish</span><span class="p">(</span><span class="s">&quot;Robot&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Odometry/Pose&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">poseEstimator</span><span class="p">.</span><span class="na">getEstimatedPose</span><span class="p">());</span>
+</code></pre></div>
+<h3 id="retrieving-values">Retrieving values</h3>
+<p>For retrieving values you just specify the directory and the key where the data is located and provide a default value in case the data is not found</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//Gets the gyro connection</span>
+<span class="w">    </span><span class="c1">// and return false in case NTPublisher fails in locating the value</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NTPublisher</span><span class="p">.</span><span class="na">retrieve</span><span class="p">(</span><span class="s">&quot;Robot&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;GyroConnection&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"> </span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//Returns 0,0,new Rotation2d() for default value in case of failure</span>
+<span class="w">    </span><span class="n">Pose2d</span><span class="w"> </span><span class="n">botPose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NTPublisher</span><span class="p">.</span><span class="na">retrieve</span><span class="p">(</span><span class="s">&quot;Robot&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Odometry/Pose&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Pose2d</span><span class="p">.</span><span class="na">kZero</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="supported-data-types">Supported Data Types</h3>
+<p><code>NTPublisher</code> supports:</p>
+<ul>
+<li><code>double</code></li>
+<li><code>double[]</code></li>
+<li><code>boolean</code></li>
+<li><code>boolean[]</code></li>
+<li><code>String</code></li>
+<li><code>String[]</code></li>
+<li><code>ChassisSpeeds</code></li>
+<li><code>ChassisSpeeds[]</code></li>
+<li><code>Pose2d</code></li>
+<li><code>Pose2d[]</code></li>
+<li><code>Pose3d</code></li>
+<li><code>Pose3d[]</code></li>
+<li><code>Rotation2d</code></li>
+<li><code>Rotation2d[]</code></li>
+<li><code>Rotation3d</code></li>
+<li><code>Rotation3d[]</code></li>
+<li><code>Transform2d</code></li>
+<li><code>Transform2d[]</code></li>
+<li><code>Transform3d</code></li>
+<li><code>Transform3d[]</code></li>
+<li><code>Translation2d</code></li>
+<li><code>Translation2d[]</code></li>
+<li><code>Translation3d</code></li>
+<li><code>Translation3d[]</code></li>
+<li><code>SwerveModuleState</code></li>
+<li><code>SwerveModuleState[]</code></li>
+<li><code>SwerveModulePosition</code></li>
+<li><code>SwerveModulePosition[]</code></li>
+<li><code>Color</code></li>
+<li><code>Sendable</code></li>
+</ul>
+<h3 id="manual-sendable-update">Manual Sendable Update</h3>
+<p>For <code>NTPublisher</code> to update the <code>Sendables</code> you must put an extra line in your <code>robot</code> file or in any method that update periodically, you <strong>must</strong> call the method above</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTPublisher</span><span class="p">.</span><span class="na">updateAllSendables</span><span class="p">();</span>
+</code></pre></div>
+<p>This method is <strong>already included</strong> in the <code>Forge templates</code> and you don't need to do it unless you manually install Forge</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section is for users that install Forge manually and not through a template!</p>
+</div>
+<h2 id="networksubsystem">NetworkSubsystem</h2>
+<p><code>NetworkSubsystem</code> a wrapper class for <code>SubsystemBase</code> comes with various features such as:</p>
+<ul>
+<li>AutoPublish values</li>
+<li>Autopublish commands</li>
+<li>Own subsystem directory</li>
+<li>Easy use of <code>NTPublisher</code></li>
+<li>Display subsystem information</li>
+</ul>
+<h3 id="extending-networksubsystem">Extending NetworkSubsystem</h3>
+<p>For using <code>NetworkSubsystem</code> you need to extend it from your subsystem class instead of <code>SubsystemBase</code>, don't worry, <code>NetworkSubsystem</code> already extends <code>SubsystemBase</code> for you to use</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExampleSubsystem</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">NetworkSubsystem</span><span class="p">{</span>
+<span class="w">        </span><span class="p">...</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<p>Now, after you extend the <code>NetworkSubsystem</code> class, you must implement some methods and call the constructor of the <code>NetworkSubsystem</code> class which needs an String as the subsystem's directory and a boolen indicating wether to show or now subsystem information</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExampleSubsystem</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">NetworkSubsystem</span><span class="p">{</span>
+
+<span class="w">        </span><span class="c1">//Constructor with the NTSubsystem parameters</span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="nf">ExampleSubsystem</span><span class="p">(){</span>
+<span class="w">            </span><span class="kd">super</span><span class="p">(</span><span class="s">&quot;AwesomeSubsystem&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">//Always make sure this line is called first</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">//Use this method as the normal &quot;periodic&quot; method, DO NOT OVERRIDE the periodic() method</span>
+<span class="w">        </span><span class="c1">//As it handles internal logic and updates</span>
+<span class="w">        </span><span class="nd">@Override</span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">NetworkPeriodic</span><span class="p">(){}</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p><strong>Don't</strong> override the default periodic() method, use NetworkPeriodic() instead!</p>
+</div>
+<h3 id="using-networksubsystem">Using NetworkSubsystem</h3>
+<p>Now that you setup your subsystem you can use various features that this class provides!</p>
+<h4 id="autopublish">AutoPublish</h4>
+<p>If you want to auto publish a method, you can use the <code>@AutoNetworkPublisher</code> annotation, provide a key and your value is publisher automatically!</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//This will be published to YourSubsystemKey/Modules/ChassisSpeeds</span>
+<span class="w">    </span><span class="nd">@AutoNetworkPublisher</span><span class="p">(</span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Modules/ChassisSpeeds&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ChassisSpeeds</span><span class="w"> </span><span class="nf">getChassisSpeeds</span><span class="p">(){</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">kinematics</span><span class="p">.</span><span class="na">toChassisSpeeds</span><span class="p">(</span><span class="n">getModuleStates</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For AutoNetworkPublisher to work, it must be a compatible data type from <code>NTPublisher</code></p>
+</div>
+<h4 id="publishcommands">PublishCommands</h4>
+<p>You can publish a Command to dashboards and have a button to trigger the command on the dashboard, just use the annotation <code>@NetworkCommand</code> and pass a desired key!</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nd">@NetworkCommand</span><span class="p">(</span><span class="s">&quot;Commands/ResetHeading&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Command</span><span class="w"> </span><span class="nf">resetHeadingCommand</span><span class="p">(){</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Commands</span><span class="p">.</span><span class="na">runOnce</span><span class="p">(()</span><span class="o">-&gt;</span><span class="w"> </span><span class="n">resetHeading</span><span class="p">(),</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<h4 id="publish-and-retrieving-data">Publish and retrieving data</h4>
+<p><code>NetworkSubsystem</code> already provides you the table for you to publish values with <code>NTPublisher</code></p>
+<p>Publishing values, Instead of doing:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTPublisher</span><span class="p">.</span><span class="na">publish</span><span class="p">(</span><span class="s">&quot;MySubsystem&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Modules/Locations&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">getModuleLocations</span><span class="p">());</span>
+</code></pre></div>
+<p>You can just call:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">publishOutput</span><span class="p">(</span><span class="s">&quot;Modules/Locations&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">getModuleLocations</span><span class="p">());</span>
+</code></pre></div>
+<p>And it will work exactly the same! all data types supported by <code>NTPublisher</code> are supported by <code>NetworkSubsystem</code></p>
+<p>And for retrieving a value just use:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//False is the default value we want to use in case</span>
+<span class="w">    </span><span class="c1">//The path is not found</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">myValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getOutput</span><span class="p">(</span><span class="s">&quot;AwesomeValue&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="ntlistener">NTListener</h2>
+<p><code>NTListener&lt;T&gt;</code> is a generic utility class for subscribing to real-time data updates from WPILib's NetworkTables. It enables tracking of value changes on a specific key in a specific table, supporting a wide range of data types including basic primitives, arrays, and WPILib geometry/kinematics classes.</p>
+<h3 id="using-listener">Using Listener</h3>
+<p>You must use the provided static factory methods to instantiate an NTListener. Each method creates a listener for a specific data type:</p>
+<p>Primitives</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTListener</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">ofDouble</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">tableName</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">key</span><span class="p">);</span>
+<span class="w">    </span><span class="n">NTListener</span><span class="o">&lt;</span><span class="n">Boolean</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">ofBoolean</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">tableName</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">key</span><span class="p">);</span>
+<span class="w">    </span><span class="n">NTListener</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">ofString</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">tableName</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">key</span><span class="p">);</span>
+</code></pre></div>
+<p>GeometryTypes</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTListener</span><span class="o">&lt;</span><span class="n">Pose2d</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">ofPose2d</span><span class="p">(...);</span>
+<span class="w">    </span><span class="n">NTListener</span><span class="o">&lt;</span><span class="n">Pose3d</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">ofPose3d</span><span class="p">(...);</span>
+<span class="w">    </span><span class="n">NTListener</span><span class="o">&lt;</span><span class="n">Translation2d</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">ofTranslation2d</span><span class="p">(...);</span>
+<span class="w">    </span><span class="n">NTListener</span><span class="o">&lt;</span><span class="n">Translation3d</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">ofTranslation3d</span><span class="p">(...);</span>
+<span class="w">    </span><span class="n">NTListener</span><span class="o">&lt;</span><span class="n">Rotation2d</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">ofRotation2d</span><span class="p">(...);</span>
+<span class="w">    </span><span class="n">NTListener</span><span class="o">&lt;</span><span class="n">Rotation3d</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">ofRotation3d</span><span class="p">(...);</span>
+<span class="w">    </span><span class="n">NTListener</span><span class="o">&lt;</span><span class="n">Transform2d</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">ofTransform2d</span><span class="p">(...);</span>
+<span class="w">    </span><span class="n">NTListener</span><span class="o">&lt;</span><span class="n">Transform3d</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">ofTransform3d</span><span class="p">(...);</span>
+</code></pre></div>
+<p>Kinematics</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTListener</span><span class="o">&lt;</span><span class="n">SwerveModuleState</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">ofSwerveModuleState</span><span class="p">(...);</span>
+<span class="w">    </span><span class="n">NTListener</span><span class="o">&lt;</span><span class="n">SwerveModulePosition</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">ofSwerveModulePosition</span><span class="p">(...);</span>
+<span class="w">    </span><span class="n">NTListener</span><span class="o">&lt;</span><span class="n">ChassisSpeeds</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">ofChassisSpeeds</span><span class="p">(...);</span>
+</code></pre></div>
+<p>Color</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTListener</span><span class="o">&lt;</span><span class="n">Color</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">ofColor</span><span class="p">(...);</span>
+</code></pre></div>
+<p>All of the above types also support array-based listeners:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTListener</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">[]&gt;</span><span class="w"> </span><span class="nf">ofDoubleArray</span><span class="p">(...);</span>
+<span class="w">    </span><span class="n">NTListener</span><span class="o">&lt;</span><span class="n">Pose2d</span><span class="o">[]&gt;</span><span class="w"> </span><span class="nf">ofPose2dArray</span><span class="p">(...);</span>
+<span class="w">    </span><span class="c1">//... and so on</span>
+</code></pre></div>
+<p>Example of a <code>NTListener</code> creation</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTListener</span><span class="o">&lt;</span><span class="n">Pose2d</span><span class="o">&gt;</span><span class="w"> </span><span class="n">robotPoseListener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NTListener</span><span class="p">.</span><span class="na">ofPose2d</span><span class="p">(</span><span class="s">&quot;Vision&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;RobotPose&quot;</span><span class="p">);</span>
+</code></pre></div>
+<ul>
+<li>
+<p>Initializes a listener on a NetworkTable entry.</p>
+</li>
+<li>
+<p>Subscribes to kValueAll events.</p>
+</li>
+<li>
+<p>Automatically tracks value changes.</p>
+</li>
+</ul>
+<h3 id="methods">Methods</h3>
+<p>boolean <code>hasChanged()</code></p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">robotPoseListener</span><span class="p">.</span><span class="na">hasChanged</span><span class="p">()){</span>
+<span class="w">        </span><span class="c1">//Do something if pose changes</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<p>Returns true if the value has changed since the last call.</p>
+<p>Resets internal change flag after read.</p>
+<p>T <code>getValue()</code></p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">robotPoseListener</span><span class="p">.</span><span class="na">hasChanged</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Pose2d</span><span class="w"> </span><span class="n">updatedPose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">robotPoseListener</span><span class="p">.</span><span class="na">getValue</span><span class="p">();</span><span class="w"> </span><span class="c1">//Get the lastest Pose</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<p>Retrieves the current value from NetworkTables.</p>
+<p>Uses the appropriate NTPublisher.retrieve method for type safety.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This listener does not handle custom object serialization—only types supported by NTPublisher.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure to register the listener only once per key to avoid duplicates.</p>
+</div>
+<h2 id="nttunnablenumber">NTTunnableNumber</h2>
+<p><code>NTTunnableNumber</code> is a utility class designed to simplify the management of tunable numerical values using NetworkTables. It allows for real-time tuning and monitoring of double values from both the robot code and external interfaces like dashboards.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Be sure to call update() periodically to keep the internal value in sync with NetworkTables.</p>
+</div>
+<p>Features include:</p>
+<ul>
+<li>
+<p>Subscribe to and publish double values via NetworkTables</p>
+</li>
+<li>
+<p>Track and modify values in real time</p>
+</li>
+<li>
+<p>Publish only when values change</p>
+</li>
+<li>
+<p>Detect whether a value has changed externally</p>
+</li>
+</ul>
+<h3 id="using-tunnable-number">Using Tunnable number</h3>
+<p>Parameters for creating a <code>NTTunnableNumber</code> are:</p>
+<p>key: The NetworkTables key for the value</p>
+<p>defaultValue: The initial value if no value exists in NetworkTables</p>
+<h4 id="example-constructor">Example constructor</h4>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTTunnableNumber</span><span class="w"> </span><span class="n">maxSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NTTunnableNumber</span><span class="p">(</span><span class="s">&quot;Drive/MaxSpeed&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="methods_1">Methods</h3>
+<p><code>update()</code></p>
+<p>Updates the internal stored value from the latest subscriber value. Must be called periodically (e.g., in subsystem periodic() method).</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">maxSpeed</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+</code></pre></div>
+<p><code>get()</code></p>
+<p>Returns the current value stored locally (after calling update()).</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">maxSpeed</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+</code></pre></div>
+<p><code>set(double value)</code></p>
+<p>Sets a new value and publishes it to NetworkTables. Only publishes if the value has changed.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">maxSpeed</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mf">4.0</span><span class="p">);</span>
+</code></pre></div>
+<p><code>hasChanged()</code></p>
+<p>Checks if the value from NetworkTables is different from the last value set via set() or update().</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">maxSpeed</span><span class="p">.</span><span class="na">hasChanged</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Value changed externally!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<p>Example integration:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DriveSubsystem</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">SubsystemBase</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">NTTunnableNumber</span><span class="w"> </span><span class="n">maxSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NTTunnableNumber</span><span class="p">(</span><span class="s">&quot;Drive/MaxSpeed&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">);</span>
+
+<span class="w">        </span><span class="nd">@Override</span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">periodic</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">maxSpeed</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+<span class="w">            </span><span class="n">SmartDashboard</span><span class="p">.</span><span class="na">putNumber</span><span class="p">(</span><span class="s">&quot;Current Max Speed&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">maxSpeed</span><span class="p">.</span><span class="na">get</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<h4 id="best-practices">Best Practices</h4>
+<ul>
+<li>
+<p>Always call update() before using get() to ensure fresh values</p>
+</li>
+<li>
+<p>Use consistent NetworkTables paths for tuning parameters</p>
+</li>
+<li>
+<p>Group related keys under the same subsystem namespace (e.g., "Shooter/PID/kP")</p>
+</li>
+</ul>
+<h2 id="ntjoystick">NTJoystick</h2>
+<p><code>NTJoystick</code> supports for easy logging of joysticks without having advantage kit, it logs all the values of the avis, buttons, povs and special buttons. Currently supports <code>CommandXBoxController</code>, <code>CommandPS4Controller</code>, <code>CommandPS5Controller</code> and you can manually send your joystick values if you don't use the classes from above.</p>
+<h3 id="usage">Usage</h3>
+<p>This class works with <code>NTPublisher</code> but can also work with <code>SmartDashboard</code>, all you have to do is call the static method <code>NTJoystick.from(yourJoystick)</code> and pass your joystick and thats it!</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">NTPublisher</label><label for="__tabbed_1_2">SmartDashboard</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RobotContainer</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">CommandPS5Controller</span><span class="w"> </span><span class="n">driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CommandPS5Controller</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="nf">RobotContainer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">            </span><span class="n">NTPublisher</span><span class="p">.</span><span class="na">publish</span><span class="p">(</span><span class="s">&quot;NTControllers&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Driver1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">NTJoystick</span><span class="p">.</span><span class="na">from</span><span class="p">(</span><span class="n">driver</span><span class="p">));</span><span class="w"> </span><span class="c1">//publish driver joystick</span>
+
+<span class="w">            </span><span class="n">configureBindings</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RobotContainer</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">CommandPS5Controller</span><span class="w"> </span><span class="n">driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CommandPS5Controller</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="nf">RobotContainer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">            </span><span class="n">SmartDashboard</span><span class="p">.</span><span class="na">putData</span><span class="p">(</span><span class="s">&quot;Driver1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">NTJoystick</span><span class="p">.</span><span class="na">from</span><span class="p">(</span><span class="n">driver</span><span class="p">));</span><span class="w"> </span><span class="c1">//publish driver joystick to SmartDashboard</span>
+
+<span class="w">            </span><span class="n">configureBindings</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="ntswerve">NTSwerve</h2>
+<p>Publishes swerve drive data to NetworkTables.</p>
+<ul>
+<li>
+<p>ChassisSpeeds – linear &amp; angular robot velocity</p>
+</li>
+<li>
+<p>Rotation2d – robot orientation</p>
+</li>
+<li>
+<p>SwerveModuleState[] – states of all swerve modules</p>
+</li>
+</ul>
+<h3 id="using-ntswerve">Using NTSwerve</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTSwerve</span><span class="w"> </span><span class="n">ntSwerve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NTSwerve</span><span class="p">(</span><span class="s">&quot;/MySwerve&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">ntSwerve</span><span class="p">.</span><span class="na">sendSwerve</span><span class="p">(</span><span class="n">chassisSpeeds</span><span class="p">,</span><span class="w"> </span><span class="n">rotation</span><span class="p">,</span><span class="w"> </span><span class="n">moduleStates</span><span class="p">);</span>
+</code></pre></div>
+<p>Efficient for visualizing robot motion and module states in real time.</p>
+<h2 id="ntcommand">NTCommand</h2>
+<p>Extends <code>Command</code> and auto-publishes it to NetworkTables on creation.</p>
+<h3 id="using-ntcommand">Using NTCommand</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyCommand</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">NTCommand</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="nf">MyCommand</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">super</span><span class="p">(</span><span class="s">&quot;/MyCommands&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DriveCommand&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<p>Publishes command state (running, finished, etc.) for visualization/debugging.</p>
+<h2 id="ntposeestimator">NTPoseEstimator</h2>
+<p>Publishes poses from a SwerveDrivePoseEstimator to NetworkTables using multiple slots. (In case of debugging multiple <code>SwerveDrivePoseEstimator</code>).</p>
+<h3 id="using-ntposeestimator">Using NTPoseEstimator</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTPoseEstimator</span><span class="w"> </span><span class="n">posePublisher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NTPoseEstimator</span><span class="p">(</span><span class="s">&quot;/Pose/&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<span class="w">    </span><span class="n">posePublisher</span><span class="p">.</span><span class="na">sendEstimator</span><span class="p">(</span><span class="n">odometer</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div>
+<p>Each slot stores the robot's estimated pose for modular multi-robot or multi-instance dashboards.</p>
+<h2 id="ntarrayboolean">NTArrayBoolean</h2>
+<p>Manually publishes boolean arrays to NetworkTables.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTArrayBoolean</span><span class="w"> </span><span class="n">boolPub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NTArrayBoolean</span><span class="p">(</span><span class="s">&quot;MyKey&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">boolPub</span><span class="p">.</span><span class="na">sendBoolean</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="kt">boolean</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">});</span>
+</code></pre></div>
+<h2 id="ntarraydata">NTArrayData<T></h2>
+<p>Manually publishes arrays of <code>struct</code>-based data to NetworkTables.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTArrayData</span><span class="o">&lt;</span><span class="n">MyStructType</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dataPub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NTArrayData</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="s">&quot;Key&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MyStructType</span><span class="p">.</span><span class="na">struct</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataPub</span><span class="p">.</span><span class="na">sendData</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">MyStructType</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">});</span>
+</code></pre></div>
+<h2 id="ntarraydouble">NTArrayDouble</h2>
+<p>Manually publishes double[] to NetworkTables.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTArrayDouble</span><span class="w"> </span><span class="n">doublePub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NTArrayDouble</span><span class="p">(</span><span class="s">&quot;Key&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">doublePub</span><span class="p">.</span><span class="na">sendDouble</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="w"> </span><span class="p">});</span>
+</code></pre></div>
+<h2 id="ntarraystring">NTArrayString</h2>
+<p>Manually publishes String[] to NetworkTables.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTArrayString</span><span class="w"> </span><span class="n">stringPub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NTArrayString</span><span class="p">(</span><span class="s">&quot;Key&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">stringPub</span><span class="p">.</span><span class="na">sendString</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;world&quot;</span><span class="w"> </span><span class="p">});</span>
+</code></pre></div>
+<h2 id="ntboolean">NTBoolean</h2>
+<p>Manually publishes a single boolean value to NetworkTables.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTBoolean</span><span class="w"> </span><span class="n">boolPub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NTBoolean</span><span class="p">(</span><span class="s">&quot;Key&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">boolPub</span><span class="p">.</span><span class="na">sendBoolean</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="ntdata">NTData<T></h2>
+<p>Manually publishes a single <code>struct</code>-based data object.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTData</span><span class="o">&lt;</span><span class="n">MyStruct</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dataPub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NTData</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="s">&quot;Key&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MyStruct</span><span class="p">.</span><span class="na">struct</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataPub</span><span class="p">.</span><span class="na">sendData</span><span class="p">(</span><span class="n">myStructInstance</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="ntdouble">NTDouble</h2>
+<p>Manually publishes a single double value to NetworkTables.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTDouble</span><span class="w"> </span><span class="n">doublePub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NTDouble</span><span class="p">(</span><span class="s">&quot;Key&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">doublePub</span><span class="p">.</span><span class="na">sendDouble</span><span class="p">(</span><span class="mf">3.14</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="ntstring">NTString</h2>
+<p>Manually publishes a single String to NetworkTables.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTString</span><span class="w"> </span><span class="n">stringPub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NTString</span><span class="p">(</span><span class="s">&quot;Key&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">stringPub</span><span class="p">.</span><span class="na">sendString</span><span class="p">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="ntsupplierboolean">NTSupplierBoolean</h2>
+<p>Manually publishes a boolean from a <code>Supplier&lt;Boolean&gt;.</code></p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTSupplierBoolean</span><span class="w"> </span><span class="n">boolPub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NTSupplierBoolean</span><span class="p">(</span><span class="s">&quot;Key&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">myBoolean</span><span class="p">);</span>
+<span class="w">    </span><span class="n">boolPub</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+</code></pre></div>
+<h2 id="ntsupplierbooleanarray">NTSupplierBooleanArray</h2>
+<p>Manually publishes a Boolean[] from a <code>Supplier&lt;Boolean[]&gt;.</code></p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTSupplierBooleanArray</span><span class="w"> </span><span class="n">arrayPub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NTSupplierBooleanArray</span><span class="p">(</span><span class="s">&quot;Key&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">myArray</span><span class="p">);</span>
+<span class="w">    </span><span class="n">arrayPub</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+</code></pre></div>
+<h2 id="ntsupplierdouble">NTSupplierDouble</h2>
+<p>Manually publishes a double from a <code>Supplier&lt;Double&gt;.</code></p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTSupplierDouble</span><span class="w"> </span><span class="n">doublePub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NTSupplierDouble</span><span class="p">(</span><span class="s">&quot;Key&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">3.14</span><span class="p">);</span>
+<span class="w">    </span><span class="n">doublePub</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+</code></pre></div>
+<h2 id="ntsupplierdoublearray">NTSupplierDoubleArray</h2>
+<p>Manually publishes a double[] from a <code>Supplier&lt;double[]&gt;.</code></p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">NTSupplierDoubleArray</span><span class="w"> </span><span class="n">arrayPub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NTSupplierDoubleArray</span><span class="p">(</span><span class="s">&quot;Key&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">});</span>
+<span class="w">    </span><span class="n">arrayPub</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../page1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Getting Started">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Getting Started
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../page3/" class="md-footer__link md-footer__link--next" aria-label="Next: SwerveLib - Forge">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                SwerveLib - Forge
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Imcab" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.footer", "search.suggest", "search.highlight", "toc.integrate", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,763 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../page9/">
+      
+      
+      
+      <link rel="icon" href="../assets/LOGO.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>REV - Forge - Forge by FRC - 3472</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="buluk" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rev-forge" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Forge by FRC - 3472" class="md-header__button md-logo" aria-label="Forge by FRC - 3472" data-md-component="logo">
+      
+  <img src="../assets/FORGEWHITE.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Forge by FRC - 3472
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              REV - Forge
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="buluk" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Forge by FRC - 3472" class="md-nav__button md-logo" aria-label="Forge by FRC - 3472" data-md-component="logo">
+      
+  <img src="../assets/FORGEWHITE.png" alt="logo">
+
+    </a>
+    Forge by FRC - 3472
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to Forge Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NetworkTablesUtil - Forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SwerveLib - Forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RobotState - Forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sim - Forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Field - forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Equals -Forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math - Forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    REV - Forge
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    REV - Forge
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-revblinkin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a REVBlinkin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a REVBlinkin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-a-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting a pattern
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-a-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting a pattern
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forgesparkmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      ForgeSparkMax
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ForgeSparkMax">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-an-forgesparkmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring an ForgeSparkMax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-encoder-reads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting encoder reads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publish" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publish
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="rev-forge">REV - Forge</h1>
+<h2 id="getting-started">Getting started</h2>
+<p>Forge allows users to program a way to much easier the RevBlinkin lev driver based on all the
+<a href="https://docs.revrobotics.com/rev-crossover-products/blinkin/gs/patterns">available patterns</a> Rev offers.</p>
+<p>Forge also haves its own <code>SparkMax</code> wrapper class</p>
+<h2 id="creating-a-revblinkin">Creating a REVBlinkin</h2>
+<p>To create a REVBlinkin just pass the pwm port on the RoboRIO an thats all!</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//Creating a REVBlinkin on PWM port 0</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">REVBlinkin</span><span class="w"> </span><span class="n">blinkin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">REVBlinkin</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="setting-a-pattern">Setting a pattern</h3>
+<p>For setting a patter to the REVBlinkin, use the <code>setPattern()</code> method that accept a <a href="https://docs.revrobotics.com/rev-crossover-products/blinkin/gs/patterns">pattern</a> from REV LED PATTERN TABLES</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//Setting a pattern</span>
+<span class="w">    </span><span class="n">blinkin</span><span class="p">.</span><span class="na">setPattern</span><span class="p">(</span><span class="n">PatternType</span><span class="p">.</span><span class="na">FireLarge</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="getting-a-pattern">Getting a pattern</h3>
+<p>Forge's REVBlinkin class supports the option to get the current pattern of the device as an <code>optional</code>.</p>
+<p>Checking if the current pattern is Aqua:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//Get leds current pattern </span>
+<span class="w">    </span><span class="n">Optional</span><span class="o">&lt;</span><span class="n">PatternType</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">blinkin</span><span class="p">.</span><span class="na">getPattern</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">//Compare</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pattern</span><span class="p">.</span><span class="na">isPresent</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">pattern</span><span class="p">.</span><span class="na">get</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">PatternType</span><span class="p">.</span><span class="na">Aqua</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hey! I am Aqua&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<p>If you just want to use the <code>getPattern()</code> method to check if the blinkin has an specified patter you can use the
+<code>hasPattern()</code> method:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//Compare</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">blinkin</span><span class="p">.</span><span class="na">hasPattern</span><span class="p">(</span><span class="n">PatternType</span><span class="p">.</span><span class="na">Aqua</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hey! I am Aqua&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<h2 id="forgesparkmax">ForgeSparkMax</h2>
+<p><code>ForgeSparkMax</code> is a wrapper instance of  rev´s <code>SparkMax</code>, it includes new methods, easy dashoard support, integrated relative encoder and easy configuration</p>
+<h3 id="configuring-an-forgesparkmax">Configuring an ForgeSparkMax</h3>
+<p>For full configuration use the <code>flashConfiguration</code> method which accepts an current limit, invertState, idleMode and voltage compensation</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//Creation, ForgeSparkMax can assume you&#39;re using MotorType.kBrushless</span>
+<span class="w">    </span><span class="n">ForgeSparkMax</span><span class="w"> </span><span class="n">driveSparkMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ForgeSparkMax</span><span class="p">(</span><span class="n">DriveConstants</span><span class="p">.</span><span class="na">frontLeft</span><span class="p">.</span><span class="na">DrivePort</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//Full configuration</span>
+<span class="w">    </span><span class="n">driveSparkMax</span><span class="p">.</span><span class="na">flashConfiguration</span><span class="p">(</span>
+<span class="w">            </span><span class="n">isDriveMotorInverted</span><span class="p">,</span><span class="w"> </span><span class="c1">//The boolean to invert the motor</span>
+<span class="w">            </span><span class="n">IdleMode</span><span class="p">.</span><span class="na">kBrake</span><span class="p">,</span><span class="w"> </span><span class="c1">//Idle mode</span>
+<span class="w">            </span><span class="mi">43</span><span class="p">,</span><span class="w"> </span><span class="c1">//Current limit</span>
+<span class="w">            </span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// True for 12V voltage Compensation</span>
+</code></pre></div>
+<h3 id="getting-encoder-reads">Getting encoder reads</h3>
+<p>For getting inner encoder reads you don't need to create a <code>RelativeEncoder</code> class, <code>ForgeSparkMax</code> already includes and configures the encoder, you can access its method and get an <code>EncoderResult</code> which you can add offsets, invert the read, put reductions, convertions or pass it directly to Radians / Degrees or RadiansPerSecond</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//Creation, ForgeSparkMax can assume you&#39;re using MotorType.kBrushless</span>
+<span class="w">    </span><span class="n">ForgeSparkMax</span><span class="w"> </span><span class="n">driveSparkMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ForgeSparkMax</span><span class="p">(</span><span class="n">DriveConstants</span><span class="p">.</span><span class="na">frontLeft</span><span class="p">.</span><span class="na">DrivePort</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ForgeSparkMax</span><span class="w"> </span><span class="n">turnSparkMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ForgeSparkMax</span><span class="p">(</span><span class="n">DriveConstants</span><span class="p">.</span><span class="na">frontLeft</span><span class="p">.</span><span class="na">TurnPort</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//Getting drive Velocity in Radians per Second</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">driveVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">driveSparkMax</span><span class="p">.</span><span class="na">getVelocity</span><span class="p">().</span><span class="na">toRadiansPerSecond</span><span class="p">().</span><span class="na">getRead</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">//Getting drive Position in Radians</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">drivePosition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">driveSparkMax</span><span class="p">.</span><span class="na">getPosition</span><span class="p">().</span><span class="na">toRadians</span><span class="p">().</span><span class="na">getRead</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">//Getting Turn position with a reduction</span>
+<span class="w">    </span><span class="n">Rotation2d</span><span class="w"> </span><span class="n">moduleAngle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
+<span class="w">    </span><span class="n">Rotation2d</span><span class="p">.</span><span class="na">fromRotations</span><span class="p">(</span>
+<span class="w">      </span><span class="n">turnSparkMax</span><span class="p">.</span><span class="na">getPosition</span><span class="p">().</span><span class="na">withReduction</span><span class="p">(</span><span class="n">turnMotorReduction</span><span class="p">).</span><span class="na">getRead</span><span class="p">());</span>
+</code></pre></div>
+<h3 id="commands">Commands</h3>
+<p>This motor class include the capability for easy voltage / speeds commands instead of creating a new command.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Example One</label><label for="__tabbed_1_2">Example Two</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="c1">//Returning a Command for easy use outside this class</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">Command</span><span class="w"> </span><span class="nf">speedMotorCommand</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">speed</span><span class="p">,</span><span class="w"> </span><span class="n">Subsystem</span><span class="w"> </span><span class="n">requirements</span><span class="p">){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">m_motor</span><span class="p">.</span><span class="na">speedCommand</span><span class="p">(</span><span class="n">speed</span><span class="p">,</span><span class="w"> </span><span class="n">requirements</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="c1">//Returning a Command for easy use outside this class</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">Command</span><span class="w"> </span><span class="nf">speedMotorCommand</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">speed</span><span class="p">){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">m_motor</span><span class="p">.</span><span class="na">speedCommand</span><span class="p">(</span><span class="n">speed</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span><span class="w"> </span><span class="c1">//using this assuming this method is in an subsystem class </span>
+<span class="w">  </span><span class="p">}</span><span class="w">  </span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="publish">Publish</h3>
+<p>You can publish motor info to the Dashboard / Network tables through a <code>Sendable</code></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">SmartDashboard</label><label for="__tabbed_2_2">NTPublisher</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">SmartDashboard</span><span class="p">.</span><span class="na">putData</span><span class="p">(</span><span class="s">&quot;DriveSpark&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">driveSparkMax</span><span class="p">);</span><span class="w"> </span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">NTPublisher</span><span class="p">.</span><span class="na">publish</span><span class="p">(</span><span class="s">&quot;SwerveModule&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Motors&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">driveSparkMax</span><span class="p">);</span><span class="w">  </span>
+</code></pre></div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../page9/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Math - Forge">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Math - Forge
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Imcab" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.footer", "search.suggest", "search.highlight", "toc.integrate", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

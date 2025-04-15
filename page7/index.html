@@ -1,0 +1,973 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../page6/">
+      
+      
+        <link rel="next" href="../page9/">
+      
+      
+      <link rel="icon" href="../assets/LOGO.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Equals -Forge - Forge by FRC - 3472</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="buluk" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#equals-forge" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Forge by FRC - 3472" class="md-header__button md-logo" aria-label="Forge by FRC - 3472" data-md-component="logo">
+      
+  <img src="../assets/FORGEWHITE.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Forge by FRC - 3472
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Equals -Forge
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="buluk" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Forge by FRC - 3472" class="md-nav__button md-logo" aria-label="Forge by FRC - 3472" data-md-component="logo">
+      
+  <img src="../assets/FORGEWHITE.png" alt="logo">
+
+    </a>
+    Forge by FRC - 3472
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to Forge Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NetworkTablesUtil - Forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SwerveLib - Forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RobotState - Forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sim - Forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Field - forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Equals -Forge
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Equals -Forge
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditional">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choosing-among-a-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing Among a List
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epsilon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epsilon
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Epsilon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage-with-custom-epsilon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage (with custom epsilon)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-default-epsilon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage (default epsilon)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Domain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking Range
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-distances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Distances
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min-max-value-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Min &amp; Max Value Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-specific-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edge-Specific Checks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-nearest-edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding Nearest Edge
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domainutils" class="md-nav__link">
+    <span class="md-ellipsis">
+      DomainUtils
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DomainUtils">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inrange" class="md-nav__link">
+    <span class="md-ellipsis">
+      inRange
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outofrange" class="md-nav__link">
+    <span class="md-ellipsis">
+      outOfRange
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distancetolimit" class="md-nav__link">
+    <span class="md-ellipsis">
+      distanceToLimit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twodimensionalspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      TwoDimensionalSpace
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TwoDimensionalSpace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constructor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#threedimensionalspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      ThreeDimensionalSpace
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math - Forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../page91/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REV - Forge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="equals-forge">Equals -Forge</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The <code>equals</code> package in Forge provides robust utilities to help you determine if a robot or field object is "in range" or "at space" in both 2D and 3D environments, or comparing two values, objects. It includes helpful spatial classes and domain checking utilities that are super useful for autonomous logic, alignment, and precision checking.</p>
+<h2 id="conditional">Conditional</h2>
+<p><code>Conditional</code> provides a set of flexible methods for choosing between values based on boolean conditions or predicates. This utility is helpful when making clean, concise decisions without repetitive <code>if</code>-<code>else</code> blocks.</p>
+<p>It supports choosing:</p>
+<ul>
+<li>
+<p>Between two objects</p>
+</li>
+<li>
+<p>Between two primitives</p>
+</li>
+<li>
+<p>Among multiple values in a list</p>
+</li>
+</ul>
+<h3 id="basic-usage">Basic Usage</h3>
+<p>You can choose between two values using a condition:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">//Examples</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">winner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Conditional</span><span class="p">.</span><span class="na">chooseBetween</span><span class="p">(</span><span class="s">&quot;Blue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Red&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">isBlueAlliance</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">winnerDouble</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Conditional</span><span class="p">.</span><span class="na">chooseBetween</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="n">isBlueAlliance</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">Pose2d</span><span class="w"> </span><span class="n">winnerPose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Conditional</span><span class="p">.</span><span class="na">chooseBetween</span><span class="p">(</span><span class="n">myPose1</span><span class="p">,</span><span class="w"> </span><span class="n">myPose2</span><span class="p">,</span><span class="w"> </span><span class="n">isBlueAlliance</span><span class="p">);</span>
+</code></pre></div>
+<p>Or choose based on a <code>Predicate&lt;T&gt;</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Conditional</span><span class="p">.</span><span class="na">chooseBetween</span><span class="p">(</span><span class="s">&quot;Alpha&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Beta&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">startsWith</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">));</span>
+</code></pre></div>
+<h3 id="choosing-among-a-list">Choosing Among a List</h3>
+<p>Get an item by index with fallback to the last element:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">strategies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;Offense&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Defense&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Support&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">selected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Conditional</span><span class="p">.</span><span class="na">chooseAmong</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">strategies</span><span class="p">);</span><span class="w"> </span><span class="c1">//&quot;Defense&quot;</span>
+</code></pre></div>
+<p>Find the first element that matches a predicate:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">startsWithS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Conditional</span><span class="p">.</span><span class="na">chooseAmong</span><span class="p">(</span><span class="n">strategies</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">startsWith</span><span class="p">(</span><span class="s">&quot;S&quot;</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;Default&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//&quot;Support&quot;</span>
+</code></pre></div>
+<p>Use a boolean array to choose the first matching condition:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">boolean</span><span class="o">[]</span><span class="w"> </span><span class="n">conditions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">boolean</span><span class="o">[]</span><span class="p">{</span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">};</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">pick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Conditional</span><span class="p">.</span><span class="na">chooseAmong</span><span class="p">(</span><span class="n">conditions</span><span class="p">,</span><span class="w"> </span><span class="n">strategies</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Fallback&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//&quot;Defense&quot;</span>
+</code></pre></div>
+<h2 id="epsilon">Epsilon</h2>
+<p><code>Epsilon</code> helps you compare floating-point numbers (like <code>double</code>) safely, using a small tolerance value (aka epsilon). This avoids the usual precision issues you get when comparing doubles directly.</p>
+<p>You can use it to:</p>
+<ul>
+<li>
+<p>Compare two doubles with a custom tolerance</p>
+</li>
+<li>
+<p>Use a default precision <code>(1e-9)</code> for quick checks</p>
+</li>
+</ul>
+<h3 id="usage-with-custom-epsilon">Usage (with custom epsilon)</h3>
+<p>Compares two double values using a custom epsilon:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">areEqual</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Epsilon</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="mf">3.14159</span><span class="p">,</span><span class="w"> </span><span class="mf">3.14158</span><span class="p">,</span><span class="w"> </span><span class="mf">1e-4</span><span class="p">);</span><span class="w"> </span><span class="c1">//true</span>
+</code></pre></div>
+<p>This method returns <code>true</code> if the absolute difference between the values is less than or equal to the epsilon.</p>
+<h3 id="usage-default-epsilon">Usage (default epsilon)</h3>
+<p>Uses the default kEpsilon value:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isSame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Epsilon</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="mf">5.000000001</span><span class="p">,</span><span class="w"> </span><span class="mf">5.000000002</span><span class="p">);</span><span class="w"> </span><span class="c1">//true</span>
+</code></pre></div>
+<p>Great for when you just want to check if two numbers are “close enough” without thinking too hard.</p>
+<h2 id="domain">Domain</h2>
+<p><code>Domain</code> is a class that represents a numerical range. It's useful for checking if values are within certain bounds, how close they are to the edges, and enforcing inclusion or exclusion on range limits.</p>
+<p>It comes with:</p>
+<ul>
+<li>
+<p>Enum flags for inclusive (<code>FULL</code>) or exclusive (<code>EMPTY</code>) edges</p>
+</li>
+<li>
+<p>Methods for checking if a value is within, at an edge, or outside the range</p>
+</li>
+<li>
+<p>Distance-to-limit calculations</p>
+</li>
+</ul>
+<h2 id="creating-a-domain">Creating a Domain</h2>
+<p>You can create a domain with default full edges:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">Domain</span><span class="w"> </span><span class="n">domain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Domain</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">10.0</span><span class="p">);</span>
+</code></pre></div>
+<p>Or customize edge inclusivity using <code>DomainEdge</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">Domain</span><span class="w"> </span><span class="n">domain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Domain</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="n">Domain</span><span class="p">.</span><span class="na">DomainEdge</span><span class="p">.</span><span class="na">EMPTY</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="w"> </span><span class="n">Domain</span><span class="p">.</span><span class="na">DomainEdge</span><span class="p">.</span><span class="na">FULL</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="checking-range">Checking Range</h3>
+<p>You can check if a value is inside, outside, or exactly at the half:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">inside</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">domain</span><span class="p">.</span><span class="na">inRange</span><span class="p">(</span><span class="mf">5.0</span><span class="p">);</span><span class="w"> </span><span class="c1">//true</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">outside</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">domain</span><span class="p">.</span><span class="na">outOfBounds</span><span class="p">(</span><span class="mf">11.0</span><span class="p">);</span><span class="w"> </span><span class="c1">//true</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">halfway</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">domain</span><span class="p">.</span><span class="na">atHalf</span><span class="p">(</span><span class="mf">5.0</span><span class="p">);</span><span class="w"> </span><span class="c1">//true</span>
+</code></pre></div>
+<h3 id="getting-distances">Getting Distances</h3>
+<p>If you want to know how close a value is to either end:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">toMin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">domain</span><span class="p">.</span><span class="na">distanceToMin</span><span class="p">(</span><span class="mf">3.0</span><span class="p">);</span><span class="w"> </span><span class="c1">//distance to min</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">toMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">domain</span><span class="p">.</span><span class="na">distanceToMax</span><span class="p">(</span><span class="mf">3.0</span><span class="p">);</span><span class="w"> </span><span class="c1">//distance to max</span>
+</code></pre></div>
+<h3 id="min-max-value-access">Min &amp; Max Value Access</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">domain</span><span class="p">.</span><span class="na">minValue</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">domain</span><span class="p">.</span><span class="na">maxValue</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="edge-specific-checks">Edge-Specific Checks</h3>
+<p>You can also target edge checks directly:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">atMin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">domain</span><span class="p">.</span><span class="na">inMin</span><span class="p">(</span><span class="mf">0.0</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">atMax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">domain</span><span class="p">.</span><span class="na">inMax</span><span class="p">(</span><span class="mf">10.0</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="finding-nearest-edge">Finding Nearest Edge</h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">Domain</span><span class="p">.</span><span class="na">DomainLimit</span><span class="w"> </span><span class="n">nearest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">domain</span><span class="p">.</span><span class="na">nearest</span><span class="p">(</span><span class="mf">8.0</span><span class="p">);</span><span class="w"> </span><span class="c1">//returns MIN or MAX</span>
+</code></pre></div>
+<h2 id="domainutils">DomainUtils</h2>
+<p><code>DomainUtils</code> is a utility class that works alongside <code>Domain</code>, providing quick static methods to work with numeric ranges. It helps you determine if a value is within bounds, out of bounds, or how far it is from a specific limit.</p>
+<h3 id="inrange">inRange</h3>
+<p>Check if a value lies between two values (inclusive):</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">inside</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DomainUtils</span><span class="p">.</span><span class="na">inRange</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">10.0</span><span class="p">);</span><span class="w"> </span><span class="c1">//true</span>
+</code></pre></div>
+<h3 id="outofrange">outOfRange</h3>
+<p>Negated version of inRange:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">outside</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DomainUtils</span><span class="p">.</span><span class="na">outOfRange</span><span class="p">(</span><span class="mf">12.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">10.0</span><span class="p">);</span><span class="w"> </span><span class="c1">//true</span>
+</code></pre></div>
+<h3 id="distancetolimit">distanceToLimit</h3>
+<p>Get the absolute distance between a value and a limit:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DomainUtils</span><span class="p">.</span><span class="na">distanceToLimit</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span><span class="w"> </span><span class="mf">10.0</span><span class="p">);</span><span class="w"> </span><span class="c1">//5.0</span>
+</code></pre></div>
+<p>Great for determining proximity to either the min or max boundary.</p>
+<h2 id="twodimensionalspace">TwoDimensionalSpace</h2>
+<p><code>TwoDimensionalSpace</code> defines a 2D region using a center point and a tolerance percentage. You can use it to determine whether a Pose2d lies within this bounded area.</p>
+<h3 id="constructor">Constructor</h3>
+<p>Create a space from coordinates</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">TwoDimensionalSpace</span><span class="w"> </span><span class="n">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TwoDimensionalSpace</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">);</span><span class="w"> </span><span class="c1">//10% tolerance</span>
+</code></pre></div>
+<p>Create a space from a Translation2d</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">Translation2d</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Translation2d</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">TwoDimensionalSpace</span><span class="w"> </span><span class="n">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TwoDimensionalSpace</span><span class="p">(</span><span class="n">center</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="accessors">Accessors</h3>
+<p>Get the center as a Translation2d, Get the tolerance used, Get the coordinate ranges.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">Translation2d</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">space</span><span class="p">.</span><span class="na">asTranslation</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">tol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">space</span><span class="p">.</span><span class="na">getTolerance</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">Translation2d</span><span class="w"> </span><span class="n">xRange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">space</span><span class="p">.</span><span class="na">getXRange</span><span class="p">();</span><span class="w"> </span><span class="c1">//xRange.getX() = min, getY() = max</span>
+<span class="w">    </span><span class="n">Translation2d</span><span class="w"> </span><span class="n">yRange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">space</span><span class="p">.</span><span class="na">getYRange</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="usage">Usage</h3>
+<p>Check if a <code>Pose2d</code> is inside the space</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">inside</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">space</span><span class="p">.</span><span class="na">atSpace</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Pose2d</span><span class="p">(</span><span class="mf">2.05</span><span class="p">,</span><span class="w"> </span><span class="mf">3.05</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Rotation2d</span><span class="p">()));</span>
+</code></pre></div>
+<h2 id="threedimensionalspace">ThreeDimensionalSpace</h2>
+<p><code>ThreeDimensionalSpace</code> defines a bounded 3D region using a center point and a tolerance percentage. It lets you verify whether a <code>Pose3d</code> lies within this 3D boundary. This class works exactly the <strong>same</strong> as <code>TwoDimensionalSpace</code> but supporting 3d poses.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../page6/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Field - forge">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Field - forge
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../page9/" class="md-footer__link md-footer__link--next" aria-label="Next: Math - Forge">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Math - Forge
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Imcab" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.footer", "search.suggest", "search.highlight", "toc.integrate", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

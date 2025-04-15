@@ -1,0 +1,97 @@
+
+.md-sidebar, .md-header {
+    box-shadow: none !important;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+    background-color: #000000d8;
+    border-left: 4px solid var(--md-primary-fg-color);
+    color: var(--md-default-fg-color);
+}
+
+/* Asegura que las tablas tengan bordes visibles */
+.md-typeset table {
+    border-collapse: collapse;
+    border: 1px solid var(--md-default-fg-color--light);
+}
+
+/* Agrega bordes a las celdas */
+.md-typeset th, .md-typeset td {
+    border: 1px solid var(--md-default-fg-color--light);
+    padding: 8px;
+}
+
+/* Opcional: Estiliza los encabezados */
+.md-typeset th {
+    background-color: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+}
+
+
+[data-md-color-scheme="buluk"] {
+    
+    --md-primary-fg-color:        rgb(53, 94, 59);
+    --md-primary-fg-color--light: rgb(111, 204, 124);
+    --md-primary-fg-color--dark:  rgb(33, 58, 37);
+
+    --md-default-fg-color:               hsla(0, 0%, 100%, 0.87);
+
+    /* esto cambia el heading*/
+    --md-default-fg-color--light:        hsla(0, 0%, 100%, 0.54);
+    
+    /*esto cambia el volver al principip*/
+    --md-default-fg-color--lighter:      hsla(0, 0%, 100%, 0.32);
+
+    --md-default-fg-color--lightest:     hsla(0, 0%, 100%, 0.07);
+
+    --md-default-bg-color: rgb(18,18,18);
+    --md-default-bg-color--light:    hsla(0, 0%, 100%, 0.7);
+    --md-default-bg-color--lighter:  hsla(0, 0%, 100%, 0.3);
+    --md-default-bg-color--lightest: hsla(0, 0%, 100%, 0.12);
+
+    --md-code-fg-color:                  rgb(120, 255, 155);
+
+    --md-code-bg-color:                  rgb(31, 31, 31);
+    
+
+    --md-code-hl-color:                  hsla(#{hex2hsl($clr-blue-a200)}, 1);
+    --md-code-hl-color--light:           hsla(#{hex2hsl($clr-blue-a200)}, 0.1);
+
+    /*Code highlighting syntax color shades*/
+    --md-code-hl-number-color:           rgb(183, 183, 247);
+    --md-code-hl-special-color:          hsla(120, 50%, 50%, 1);
+    --md-code-hl-function-color:         rgb(174, 236, 144);
+    --md-code-hl-constant-color:         hsla(140, 60%, 60%, 1);
+    --md-code-hl-keyword-color:          rgb(214, 115, 194);
+    --md-code-hl-string-color:           rgb(143, 251, 255);
+    --md-code-hl-name-color:             var(--md-code-fg-color--light);
+    --md-code-hl-operator-color:         var(--md-default-fg-color);
+    --md-code-hl-punctuation-color:      var(--md-default-fg-color);
+    --md-code-hl-comment-color:          var(--md-default-fg-color--light);
+    --md-code-hl-generic-color:          var(--md-default-fg-color--light);
+    --md-code-hl-variable-color:         rgb(233, 241, 158);
+
+    --md-typeset-color:                  var(--md-default-fg-color);
+
+    /*Typeset `a` color shades*/
+    --md-typeset-a-color:                var(--md-primary-fg-color--light);
+
+    /*Typeset `del` and `ins` color shades*/
+    --md-typeset-del-color: hsla(0, 80%, 50%, 0.15);
+    --md-typeset-ins-color: hsla(140, 70%, 40%, 0.15);
+
+    /* Shadow depth 1 */
+    --md-shadow-z1:
+    0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.05),
+    0 0              #{px2rem(1px)}  hsla(0, 0%, 0%, 0.1);
+    /* Shadow depth 2 */
+    --md-shadow-z2:
+    0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.1),
+    0 0              #{px2rem(1px)}  hsla(0, 0%, 0%, 0.25);
+    /* Shadow depth 3 */
+    --md-shadow-z3:
+    0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.2),
+    0 0              #{px2rem(1px)}  hsla(0, 0%, 0%, 0.35);
+  }
+
